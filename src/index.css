@@ -1,1 +1,147 @@
 @import "tailwindcss";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
+    display: flex
+;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0f172af2;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
+    display: flex
+;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 4px 20px #0003;
+    transition: all .4s cubic-bezier(.16,1,.3,1);
+}
+.nav-bar.scrolled {
+    height: 55px;
+    background-color: rgba(15, 23, 42, 0.98);
+}
+.brain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: pulse 5s infinite;
+    filter: drop-shadow(0 0 15px rgba(96, 165, 250, 0.5));
+}
+.circuit-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: glow 3s infinite;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+.nav-logo-symbol {
+    width: 34px;
+    height: 34px;
+    position: relative;
+    margin-right: 12px;
+}
+.nav-logo-text {
+    font-size: 1.44rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+.nav-links {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+    gap: 35px;
+}
+.nav-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(12px);
+    padding: 20px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.mobile-nav-link {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+.nav-link:hover, .nav-link.active {
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .mobile-menu-button {
+        display: block;
+    }
+}
+/* Hero Section */
+#particles-canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
